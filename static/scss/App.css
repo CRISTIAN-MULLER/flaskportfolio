@@ -1,0 +1,48 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.loading .svg {
+  width: 300px;
+  height: 300px;
+  -webkit-animation: blink 2s infinite;
+  -moz-animation: blink 2s infinite;
+  animation: blink 2s infinite;
+  animation-direction: alternate;
+}
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.App {
+  height: 100vh;
+}
+.App .sections {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-color: #8a5353;
+  position: relative;
+  top: 70px;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+.App .sections::-webkit-scrollbar {
+  display: none;
+}
+.App .sections > * {
+  width: 100%;
+  height: calc(100vh - 70px);
+  scroll-snap-align: start;
+}
+
+/*# sourceMappingURL=App.css.map */
